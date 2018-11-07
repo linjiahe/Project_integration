@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sites>
+    <site>
+        <title>非小号</title>
+        <charset>UTF-8</charset>
+        <url>http://www.feixiaohao.com</url>
+        <coin-td-selector>.new-coin-list td</coin-td-selector>
+        <coin-id-selector>.new-coin-list tr</coin-id-selector>
+        <bourse-selector>.table3 td</bourse-selector>
+        <coin-name-selector></coin-name-selector>
+        <coin-img-selector1></coin-img-selector1>
+        <market-cap-selector2></market-cap-selector2>
+        <price-selector></price-selector>
+        <turnover-selector></turnover-selector>
+        <volume-selector></volume-selector>
+        <changepercent-selector></changepercent-selector>
+    </site>
+    <site>
+        <title>MyToken</title>
+        <charset>UTF-8</charset>
+        <url>https://www.mytoken.io</url>
+        <coin-name-selector>.part-brief h2</coin-name-selector>
+        <coin-id-selector>.ant-table-wrapper</coin-id-selector>
+        <bourse-selector>.table3 td</bourse-selector>
+        <coin-name-selector></coin-name-selector>
+        <coin-img-selector1></coin-img-selector1>
+        <market-cap-selector2></market-cap-selector2>
+        <price-selector></price-selector>
+        <turnover-selector></turnover-selector>
+        <volume-selector></volume-selector>
+        <changepercent-selector></changepercent-selector>
+    </site>
+
+
+</sites>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!--<plugin type="com.aisi.ewalletapi.MapperAnnotationPlugin"></plugin>-->
+
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="[e|E]xample$"/>
+            <property name="replaceString" value="Criteria"/>
+        </plugin>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://180.188.197.24:3306/commune_dev"
+                        userId="root"
+                        password="rrqkl123abc">
+            <!--设置可以获取tables remarks信息-->
+            <property name="useInformationSchema" value="true"/>
+            <!--设置可以获取remarks信息-->
+            <property name="remarks" value="true"/>
+            <property name="useSSL" value="false"/>
+
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+
+        <!-- generate Model -->
+        <javaModelGenerator targetPackage="com.blockchain.commune.model"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+
+        <sqlMapGenerator targetPackage="com.blockchain.commune.mapper"
+                         targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="ANNOTATEDMAPPER"
+                             targetPackage="com.blockchain.commune.mapper"
+                             implementationPackage="com.blockchain.commune.mapper"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+                <table tableName="user" domainObjectName="User"/>
+
+                <!--<table tableName="system_args" domainObjectName="SystemArgs"/>-->
+
+                <!--<table tableName="user_account" domainObjectName="UserAccount"/>-->
+
+                <!--<table tableName="merchant_user" domainObjectName="MerchantUser"/>-->
+
+                <!--<table tableName="category" domainObjectName="Category"/>-->
+
+                <!--<table tableName="news" domainObjectName="News"/>-->
+
+                <!--<table tableName="news_detail" domainObjectName="NewsDetail"/>-->
+
+                <!--<table tableName="sms_code" domainObjectName="SmsCode"/>-->
+
+                <!--<table tableName="scroll_item" domainObjectName="ScrollItem"/>-->
+
+                <!--<table tableName="bill" domainObjectName="Bill"/>-->
+
+                <!--<table tableName="market_hot" domainObjectName=""/>-->
+
+                <!--<table tableName="market_tag" domainObjectName=""/>-->
+
+                <!--<table tableName="purse_account" domainObjectName="PurseAccount"/>-->
+
+                <!--<table tableName="purse_sub_account_type" domainObjectName="PurseSubAccountType"/>-->
+
+                <!--<table tableName="purse_sub_account" domainObjectName="PurseSubAccount"/>-->
+
+                <!--<table tableName="purse_translog_type" domainObjectName="PurseTranslogType"/>-->
+
+                <!--<table tableName="purse_translog" domainObjectName="PurseTranslog"/>-->
+
+                <!--<table tableName="purse_daily_summary" domainObjectName="PurseDailySummary"/>-->
+
+                <!--<table tableName="read_record" domainObjectName="ReadRecord"/>-->
+        <!---->
+                <!--<table tableName="read_record_audit" domainObjectName="ReadRecordAudit"/>-->
+
+    </context>
+
+</generatorConfiguration>
